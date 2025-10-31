@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CRAFTAIX - We build brands that grow online. Websites, branding, and digital design solutions." />
+  <title>CRAFTAIX | Creative Digital Agency</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+
+    .whatsapp-btn::after {
+      content: 'Chat on WhatsApp';
+      position: absolute;
+      right: 70px;
+      bottom: 10px;
+      background-color: #25D366;
+      color: white;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .whatsapp-btn:hover::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-extrabold text-red-600 tracking-wide">CRAFTAIX</h1>
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-red-600 transition">Home</a>
+        <a href="about.html" class="hover:text-red-600 transition">About</a>
+        <a href="services.html" class="hover:text-red-600 transition">Services</a>
+        <a href="portfolio.html" class="hover:text-red-600 transition">Portfolio</a>
+        <a href="contact.html" class="hover:text-red-600 transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-block bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition font-semibold">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <button id="menu-btn" class="md:hidden fixed top-5 right-5 flex flex-col space-y-1.5 focus:outline-none z-50">
+    <span class="w-6 h-0.5 bg-gray-800"></span>
+    <span class="w-6 h-0.5 bg-gray-800"></span>
+    <span class="w-6 h-0.5 bg-gray-800"></span>
+  </button>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+    <nav class="flex flex-col space-y-4 p-5 text-gray-700 font-medium">
+      <a href="index.html" class="hover:text-red-600 transition">Home</a>
+      <a href="about.html" class="hover:text-red-600 transition">About</a>
+      <a href="services.html" class="hover:text-red-600 transition">Services</a>
+      <a href="portfolio.html" class="hover:text-red-600 transition">Portfolio</a>
+      <a href="contact.html" class="hover:text-red-600 transition">Contact</a>
+      <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition font-semibold text-center">Get a Quote</a>
+    </nav>
+  </div>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918318320035" target="_blank"
+    class="whatsapp-btn fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110 animate-bounce z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+      <path d="M20.52 3.48A11.89 11.89 0 0 0 12 0a11.89 11.89 0 0 0-8.52 3.48A11.89 11.89 0 0 0 0 12c0 2.12.55 4.19 1.59 6.01L0 24l6.16-1.58A11.95 11.95 0 0 0 12 24a11.89 11.89 0 0 0 8.52-3.48A11.89 11.89 0 0 0 24 12a11.89 11.89 0 0 0-3.48-8.52zM12 22c-1.88 0-3.72-.49-5.32-1.43l-.38-.22-3.65.94.97-3.56-.25-.37A9.91 9.91 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.42-7.58c-.29-.15-1.71-.84-1.97-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.9 1.14-.17.19-.33.22-.62.07-.29-.15-1.24-.46-2.36-1.47-.87-.77-1.45-1.71-1.62-2-.17-.29-.02-.45.13-.59.13-.13.29-.33.43-.49.14-.16.19-.26.29-.43.1-.19.05-.36-.02-.51-.07-.15-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.36-.26.29-1 1-.97 2.43.03 1.43 1.03 2.8 1.18 2.99.15.19 2.02 3.09 4.91 4.33.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"/>
+    </svg>
+  </a>
+
+  <!-- Hero Section -->
+  <section class="pt-28 sm:pt-32 md:pt-40 bg-gradient-to-r from-white to-red-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          We Build <span class="text-red-600">Brands</span> That Grow Online
+        </h2>
+        <p class="text-gray-600 mb-6 text-base sm:text-lg">
+          From websites to digital designs — we help your business look stunning and perform even better.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+          <a href="services.html" class="bg-red-600 text-white px-5 py-3 rounded-lg hover:bg-red-700 transition font-semibold">Get Started</a>
+          <a href="portfolio.html" class="border border-red-600 text-red-600 px-5 py-3 rounded-lg hover:bg-red-600 hover:text-white transition font-semibold">View Work</a>
+        </div>
+      </div>
+      <div class="md:w-1/2" data-aos="zoom-in">
+        <img src="creativeagency.jpg" alt="Creative Agency" class="rounded-xl shadow-lg w-full max-w-md mx-auto md:max-w-none" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="py-16 sm:py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <h3 class="text-2xl sm:text-3xl font-semibold mb-4">Who We Are</h3>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-base sm:text-lg">
+        We are a digital creative agency that blends design, technology, and strategy to help brands grow. Whether it’s a website or a business identity — we make it shine.
+      </p>
+      <a href="about.html" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition font-medium inline-block">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-gray-100 py-16 sm:py-20" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-center mb-10 sm:mb-12">Our Services</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="zoom-in">
+          <h4 class="text-lg sm:text-xl font-bold mb-2 text-gray-800">Web Development</h4>
+          <p class="text-gray-600 text-sm sm:text-base">Beautiful, responsive, and high-performing websites built for growth.</p>
+        </div>
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="text-lg sm:text-xl font-bold mb-2 text-gray-800">Brand Design</h4>
+          <p class="text-gray-600 text-sm sm:text-base">From logos to full brand kits — we make your business stand out visually.</p>
+        </div>
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow hover:shadow-lg transition text-center" data-aos="zoom-in" data-aos-delay="200">
+          <h4 class="text-lg sm:text-xl font-bold mb-2 text-gray-800">Social Media Posters</h4>
+          <p class="text-gray-600 text-sm sm:text-base">Creative Canva and ad designs to boost engagement and sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 sm:py-20 bg-red-600 text-white text-center px-4 sm:px-6" data-aos="fade-up">
+    <h3 class="text-2xl sm:text-3xl font-bold mb-4">Ready to Grow Your Business?</h3>
+    <p class="mb-6 text-base sm:text-lg">Let’s build your digital presence together.</p>
+    <a href="contact.html" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <h4 class="text-white font-extrabold text-lg sm:text-xl">CRAFTAIX</h4>
+      <div class="flex flex-wrap justify-center md:justify-end space-x-4 sm:space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white">Instagram</a>
+        <a href="#" class="hover:text-white">LinkedIn</a>
+        <a href="#" class="hover:text-white">Twitter</a>
+      </div>
+      <p class="mt-4 md:mt-0 text-xs sm:text-sm">© 2025 CRAFTAIX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+
+</body>
+</html>
